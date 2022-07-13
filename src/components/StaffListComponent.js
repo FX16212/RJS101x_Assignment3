@@ -22,7 +22,7 @@ const maxLength = (len) => (val) => !val || val.length <= len;
 const minLength = (len) => (val) => val && val.length >= len;
 const isNumber = (val) => !isNaN(Number(val));
 
-// Presentational component (const) dùng để Render danh sách từng nhân viên
+//ender danh sách từng nhân viên
 const RenderStaffItem = ({ staff }) => {
 	return (
 		<Link to={`/staff/${staff.id}`}>
@@ -50,7 +50,7 @@ class StaffList extends Component {
 				startDate: false,
 			},
 		};
-		/* Ràng buộc 2 chiều đối với các hàm được khai báo bên dưới */
+		/* Ràng buộc 2 chiều đối với các hàm được khai báo  */
 		this.toggleModal = this.toggleModal.bind(this);
 		this.timNhanvien = this.timNhanvien.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -86,7 +86,7 @@ class StaffList extends Component {
 			salaryScale: value.salaryScale,
 			annualLeave: value.annualLeave,
 			overTime: value.overTime,
-			image: './assets/images/alberto.png',
+			image: '../assets/images/alberto.png',
 		};
 
 		if (!this.state.doB || !this.state.startDate)
